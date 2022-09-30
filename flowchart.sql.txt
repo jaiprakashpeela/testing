@@ -1,0 +1,18 @@
+create database Flowchart;
+create table taskdefination(
+   taskId varchar(256) primary key,
+   requirement varchar(256),
+   creatorId varchar(256),
+   Stage varchar(256),
+   timelog TIMESTAMP 
+)
+
+create table staging(
+   OwnerId varchar(256) primary key,
+   taskId varchar(256) foreign key references taskdefination(taskId),
+   requirement varchar(256) ,
+   comments varchar(256),
+   Stage varchar(256),
+   timelog TIMESTAMP 
+)
+
